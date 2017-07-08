@@ -7,25 +7,56 @@
 //
 
 import UIKit
+import Twitter
+
 
 class TweetTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+  private var tweets = [Array<Twitter.Tweet>]() {
+    didSet {
+      print(tweets)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+  }
+  
+  var searchText : String? {
+    didSet {
+      tweets.removeAll()
+      tableView.reloadData()
+      searchForTweets()
+      title = searchText
     }
+  }
+  
+  private func twitterRequest() -> Twitter.Request? {
+    if let query = searchText, !query.isEmpty {
+      return Twitter.Request(search:query, count:100)
+    }
+    return nil
+  }
+  
+  private var lastTwitterRequest: Twitter.Request?
+  
+  private func searchForTweets() {
+    
+    if let request = twitterRequest() {
+      
+      lastTwitterRequest = request
 
-    // MARK: - Table view data source
+      request.fetchTweets{ [weak self] newTweets in
+        
+        if request == self?.lastTwitterRequest {
+          self?.tweets.insert(newTweets, at: 0)
+        }
+      }
+    }
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    searchText = "#stanford"
+  }
+  
+  // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

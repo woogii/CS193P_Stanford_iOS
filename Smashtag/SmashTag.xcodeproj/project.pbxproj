@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B8FBD2EB1EFD05FC00C146F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBD2EA1EFD05FC00C146F0 /* AppDelegate.swift */; };
-		B8FBD2ED1EFD05FC00C146F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBD2EC1EFD05FC00C146F0 /* ViewController.swift */; };
 		B8FBD2F01EFD05FC00C146F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FBD2EE1EFD05FC00C146F0 /* Main.storyboard */; };
 		B8FBD2F21EFD05FC00C146F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8FBD2F11EFD05FC00C146F0 /* Assets.xcassets */; };
 		B8FBD2F51EFD05FC00C146F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FBD2F31EFD05FC00C146F0 /* LaunchScreen.storyboard */; };
 		B8FBD3001EFD05FC00C146F0 /* SmashTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBD2FF1EFD05FC00C146F0 /* SmashTagTests.swift */; };
+		B8FBD3121EFD0D5600C146F0 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBD3111EFD0D5600C146F0 /* Twitter.framework */; };
+		B8FBD3131EFD0D5600C146F0 /* Twitter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B8FBD3111EFD0D5600C146F0 /* Twitter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B8FBD3161EFD0D9A00C146F0 /* TweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FBD3151EFD0D9A00C146F0 /* TweetTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,10 +27,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B8FBD3141EFD0D5600C146F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B8FBD3131EFD0D5600C146F0 /* Twitter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B8FBD2E71EFD05FC00C146F0 /* SmashTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FBD2EA1EFD05FC00C146F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8FBD2EC1EFD05FC00C146F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8FBD2EF1EFD05FC00C146F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8FBD2F11EFD05FC00C146F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8FBD2F41EFD05FC00C146F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +51,8 @@
 		B8FBD2FB1EFD05FC00C146F0 /* SmashTagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashTagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8FBD2FF1EFD05FC00C146F0 /* SmashTagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashTagTests.swift; sourceTree = "<group>"; };
 		B8FBD3011EFD05FC00C146F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8FBD3111EFD0D5600C146F0 /* Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8FBD3151EFD0D9A00C146F0 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FBD3121EFD0D5600C146F0 /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		B8FBD2DE1EFD05FC00C146F0 = {
 			isa = PBXGroup;
 			children = (
+				B8FBD3111EFD0D5600C146F0 /* Twitter.framework */,
 				B8FBD2E91EFD05FC00C146F0 /* SmashTag */,
 				B8FBD2FE1EFD05FC00C146F0 /* SmashTagTests */,
 				B8FBD2E81EFD05FC00C146F0 /* Products */,
@@ -77,12 +96,10 @@
 		B8FBD2E91EFD05FC00C146F0 /* SmashTag */ = {
 			isa = PBXGroup;
 			children = (
-				B8FBD2EA1EFD05FC00C146F0 /* AppDelegate.swift */,
-				B8FBD2EC1EFD05FC00C146F0 /* ViewController.swift */,
+				B8FBD3151EFD0D9A00C146F0 /* TweetTableViewController.swift */,
 				B8FBD2EE1EFD05FC00C146F0 /* Main.storyboard */,
-				B8FBD2F11EFD05FC00C146F0 /* Assets.xcassets */,
-				B8FBD2F31EFD05FC00C146F0 /* LaunchScreen.storyboard */,
 				B8FBD2F61EFD05FC00C146F0 /* Info.plist */,
+				B8FBD3101EFD0C7200C146F0 /* Supporting Files */,
 			);
 			path = SmashTag;
 			sourceTree = "<group>";
@@ -96,6 +113,16 @@
 			path = SmashTagTests;
 			sourceTree = "<group>";
 		};
+		B8FBD3101EFD0C7200C146F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8FBD2EA1EFD05FC00C146F0 /* AppDelegate.swift */,
+				B8FBD2F11EFD05FC00C146F0 /* Assets.xcassets */,
+				B8FBD2F31EFD05FC00C146F0 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +133,7 @@
 				B8FBD2E31EFD05FC00C146F0 /* Sources */,
 				B8FBD2E41EFD05FC00C146F0 /* Frameworks */,
 				B8FBD2E51EFD05FC00C146F0 /* Resources */,
+				B8FBD3141EFD0D5600C146F0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8FBD2ED1EFD05FC00C146F0 /* ViewController.swift in Sources */,
 				B8FBD2EB1EFD05FC00C146F0 /* AppDelegate.swift in Sources */,
+				B8FBD3161EFD0D9A00C146F0 /* TweetTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +438,7 @@
 				B8FBD3061EFD05FC00C146F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8FBD3071EFD05FC00C146F0 /* Build configuration list for PBXNativeTarget "SmashTagTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +447,7 @@
 				B8FBD3091EFD05FC00C146F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
